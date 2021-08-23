@@ -34,8 +34,8 @@ if response.exitcode == 0:
                                                                      })
 
     data = request.text
-
-    print(data)
+    data = json.loads(data)
+    print(len(data["itemList"]))
 else:
     standard_err = response.stderr
     exit_code = response.exitcode
