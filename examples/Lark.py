@@ -40,7 +40,7 @@ def trend():
     csrf_token = h.headers["X-Ware-Csrf-Token"].split(",")[1]
 
     # response = muterun_js(' '.join([os.path.abspath('browser.js'), "\""+url+"\""]))
-    a = '/Users/build/.nvm/versions/node/v12.22.4/bin/node /Users/liuwenhui/tiktok-signature/examples/browser.js "https://m.tiktok.com/api/post/item_list/?aid=1988&count=30&secUid=MS4wLjABAAAAOUoQXeHglWcq4ca3MwlckxqAe-RIKQ1zlH9NkQkbLAT_h1_6SDc4zyPdAcVdTWZF&cursor=0"'
+    a = '/Users/build/.nvm/versions/node/v12.22.4/bin/node /Users/build/.jenkins/jobs/tiktok_feed/workspace/testing/examples/browser.js "https://m.tiktok.com/api/post/item_list/?aid=1988&count=30&secUid=MS4wLjABAAAAOUoQXeHglWcq4ca3MwlckxqAe-RIKQ1zlH9NkQkbLAT_h1_6SDc4zyPdAcVdTWZF&cursor=0"'
     response = os.popen(a)
     text = response.read()
     text = json.loads(text)
