@@ -38,7 +38,7 @@ def trend():
 
     csrf_session_id = h.cookies["csrf_session_id"]
     csrf_token = h.headers["X-Ware-Csrf-Token"].split(",")[1]
-    t = '/Users/build/.nvm/versions/node/v12.22.4/bin/npm i playwright-chromium'
+    t = '/Users/build/.nvm/versions/node/v12.22.4/bin/npm i playwright-chromium -g'
     os.system(t)
     # response = muterun_js(' '.join([os.path.abspath('browser.js'), "\""+url+"\""]))
     a = '/Users/build/.nvm/versions/node/v12.22.4/bin/node /Users/build/.jenkins/jobs/tiktok_feed/workspace/testing/examples/browser.js "https://m.tiktok.com/api/post/item_list/?aid=1988&count=30&secUid=MS4wLjABAAAAOUoQXeHglWcq4ca3MwlckxqAe-RIKQ1zlH9NkQkbLAT_h1_6SDc4zyPdAcVdTWZF&cursor=0"'
